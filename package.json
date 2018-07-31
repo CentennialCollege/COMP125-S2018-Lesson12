@@ -1,0 +1,26 @@
+{
+  "name": "comp125-s2018-lesson12",
+  "version": "1.0.0",
+  "description": "NodeJS Example Project",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CentennialCollege/COMP125-S2018-Lesson12.git"
+  },
+  "author": "Tom Tsiliopoulos <tsiliopoulos@hotmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/CentennialCollege/COMP125-S2018-Lesson12/issues"
+  },
+  "homepage": "https://github.com/CentennialCollege/COMP125-S2018-Lesson12#readme",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "engines": {
+    "node": ">=10.1.0",
+    "npm": ">=6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^10.5.4"
+  }
+}
