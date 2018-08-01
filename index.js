@@ -38,7 +38,7 @@ const server = http.createServer((req, res) => {
 
   fs.readFile(filePath, function(error, content){
     if(error) {
-      if(error.code == "ENOENT") {
+      if(error.code == "ENOENT") { // file not found error
         fs.readFile("./404.html", function(error, content){
           res.writeHead(200, { 'Content-Type': contentType});
           res.end(content, "utf-8");
