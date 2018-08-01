@@ -2,8 +2,7 @@ const http = require('http'); // inserting the http module
 const fs = require("fs"); // inserting the file system module
 const path = require("path"); // inserting the path module
 
-const hostname = '127.0.0.1';
-const port = 3000;
+const port = sanitizePort(process.env.PORT || 3000);
 
 const server = http.createServer((req, res) => {
   let filePath = "." + req.url;
@@ -59,6 +58,14 @@ const server = http.createServer((req, res) => {
 
 });
 
-server.listen(port, hostname, () => {
-  console.log(`Server running at http://${hostname}:${port}/`);
+server.listen(port, () => {
+  console.log(`Server running at http://localhost:${port}/`);
 });
+
+function sanitizePort(port) {
+  if(isNaN(port)) {
+    port = parseInt(port, 10);
+  }
+
+  return port;
+}
